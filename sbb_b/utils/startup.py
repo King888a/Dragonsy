@@ -54,9 +54,9 @@ async def saves():
     except Exception as e:
         print(str(e))
     try:
-        await sbb_b(JoinChannelRequest("@Tepthon"))
-        await sbb_b(JoinChannelRequest("@P17_12"))
-        await sbb_b(JoinChannelRequest("@Tepthon_Help"))
+        await sbb_b(JoinChannelRequest("@Drago_dr"))
+        await sbb_b(JoinChannelRequest("@DragoSupport"))
+        await sbb_b(JoinChannelRequest("@updatesdr"))
     except BaseException:
         pass
 
@@ -93,9 +93,9 @@ async def startupmessage():
         if BOTLOG:
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/f1e757035e56613a9ef92.jpg",
-                caption="**تم تشغيل سورس دراكو بنجاح لعرض الاوامر ارسل .الاوامر**",
-                buttons=[(Button.url("كروب المساعدة", "https://t.me/Tepthon_Help"),)],
+                "https://telegra.ph/file/654cd694cca4137dd441f.jpg",
+                caption="**`تم تشغيل سورس دراكو بنجاح لعرض الاوامر ارسل `.الاوامر**",
+                buttons=[(Button.url("كروب المساعدة", "https://t.me/DragoSupport"),)],
             )
     except Exception as e:
         LOGS.error(e)
