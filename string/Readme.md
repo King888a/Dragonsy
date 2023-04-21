@@ -14,4 +14,4 @@
 
 <br><br>
 
-• you can make pull requests to thise repo or send translated file on https://t.me/R0r77
+• you can make pull requests to thise repo or send translated file on https://t.me/lsbax_dev
