@@ -140,8 +140,8 @@ class JokerClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**تقرير خطا جيثون**\n\n"
-                        link = "[هنا](https://t.me/QITHON)"
+                        text = "**تقرير خطا دراكو**\n\n"
+                        link = "[هنا](https://t.me/DragoSupport)"
                         text += "إذا كنت تريد يمكنك الإبلاغ عن ذلك"
                         text += f"- فقط قم بإعادة توجيه هذه الرسالة {link}.\n"
                         text += "لا يتم تسجيل اي خطا فقط التاريخ والوقت\n\n"
@@ -246,7 +246,7 @@ class JokerClient(TelegramClient):
                             "error": str(sys.exc_info()[1]),
                             "date": datetime.datetime.now(),
                         }
-                        ftext += "\n\n--------END jepthon TRACEBACK LOG--------"
+                        ftext += "\n\n--------END drago TRACEBACK LOG--------"
                         command = 'git log --pretty=format:"%an: %s" -5'
                         ftext += "\n\n\nLast 5 commits:\n"
                         output = (await runcmd(command))[:2]
@@ -255,8 +255,8 @@ class JokerClient(TelegramClient):
                         pastelink = await paste_message(
                             ftext, pastetype="s", markdown=False
                         )
-                        text = "**تقرير خطا جيثون**\n\n"
-                        link = "[هنا](https://t.me/spportm)"
+                        text = "**تقرير خطا دراكو**\n\n"
+                        link = "[هنا](https://t.me/DragoSupport)"
                         text += "إذا كنت تريد يمكنك الإبلاغ عن ذلك"
                         text += f"- فقط قم بإعادة توجيه هذه الرسالة {link}.\n"
                         text += "لا يتم تسجيل اي خطا فقط التاريخ والوقت\n\n"
