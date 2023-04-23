@@ -1,1 +1,1 @@
-from .roza_config import Confi
+from .roza_config import Config
