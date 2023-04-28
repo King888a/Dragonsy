@@ -60,10 +60,10 @@ async def iytdl_inline(event):
         input_url = (reply.text).strip()
     if not input_url:
         return await edit_delete(
-            event, "**▾∮ اكتب الرابط او قم بالرد ع رابط يوتيوب ✓**"
+            event, "**‹ اكتب الرابط او قم بالرد ع رابط ييوتيوب ›**"
         )
     catevent = await edit_or_reply(
-        event, f"**▾∮ جاري البحث في اليوتيوب : ☟** \n`'{input_url}'`"
+        event, f"**‹ جاري البحث في اليوتيوب ›** \n`'{input_url}'`"
     )
     flag = True
     cout = 0
@@ -83,7 +83,7 @@ async def iytdl_inline(event):
         await catevent.delete()
         await results[0].click(event.chat_id, reply_to=reply_to_id, hide_via=True)
     else:
-        await catevent.edit("**▾∮ عذرًا لم أستطيع ايجاد اي نتائج! ✘**")
+        await catevent.edit("**‹ عذرًا لم أستطيع ايجاد اي نتائج ›**")
 
 
 @jepiq.tgbot.on(
@@ -142,7 +142,7 @@ async def ytdl_download_callback(c_q: CallbackQuery):  # sourcery no-metrics
         else:
             _fpath = _path
     if not _fpath:
-        await edit_delete(upload_msg, "**▾∮ لم يتم العثور على شيء!**")
+        await edit_delete(upload_msg, "**‹ لم يتم العثور على شيء ›**")
         return
     if not thumb_pic and downtype == "v":
         thumb_pic = str(await pool.run_in_thread(download)(await get_ytthumb(yt_code)))
