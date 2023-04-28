@@ -1,7 +1,3 @@
-# ======================================================================================================================================
-# ping -> edited ping with pic by  @lsbax_dev
-# كتابة الملف لسورس دراكو فقط ممنوع نسبه لنفسك
-# تخمط دليل فشلك اخمط وكول اني مطور 😂😂
 
 import os
 from datetime import datetime
@@ -12,10 +8,10 @@ from sbb_b import sbb_b
 from . import hmention, reply_id
 
 PING_PIC = os.environ.get("PING_PIC") or (
-    "https://telegra.ph/file/6b2ec54f813ec78f3c6d8.jpg"
+    "https://telegra.ph/file/a177d777e8d1f4a251a50.jpg"
 )
 
-JM_TXT = os.environ.get("PING_TEXT") or "مـن لا يتعلم من الماضي لا يرحمه المستقبل  . 🖤"
+JM_TXT = os.environ.get("PING_TEXT") or "Welcome to Source Draco"
 
 
 @sbb_b.ar_cmd(pattern="بنك$")
