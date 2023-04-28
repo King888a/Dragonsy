@@ -84,8 +84,7 @@ async def echo(event):
         lecho = get_echos(event.chat_id)
         if len(lecho) == 0:
             return await edit_delete(
-                event, "٠
-لم يتم تفعيل التقليد حتى لمستخدم واحد اصلا."
+                event,"‹ لم يتم تفعيل التقليد حتى لمستخدم واحد اصلا  ›"
             )
         try:
             remove_echos(event.chat_id)
@@ -93,7 +92,7 @@ async def echo(event):
             await edit_delete(event, f"**خطأ:**\n`{e}`", 10)
         else:
             await edit_or_reply(
-                event, "∮ تم حذف تقليد جميع المستخدمين في جميع الدردشات."
+                event, "‹ تم حذف تقليد جميع المستخدمين في جميع الدردشات ›"
             )
 
 
@@ -106,7 +105,7 @@ async def echo(event):
         lsts = get_all_echos()
         group_chats = ""
         if len(lsts) <= 0:
-            return await edit_or_reply(event, "⌔∮ لم يتم تفعيل التقليد بالاصل ")
+            return await edit_or_reply(event, "‹ لم يتم تفعيل التقليد بالاصل ›")
         for echos in lsts:
             if echos.chat_type == "Personal":
                 if echos.user_username:
