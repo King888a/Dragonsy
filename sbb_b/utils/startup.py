@@ -93,8 +93,8 @@ async def startupmessage():
         if BOTLOG:
             Config.JMTHONLOGO = await sbb_b.tgbot.send_file(
                 BOTLOG_CHATID,
-                "https://telegra.ph/file/654cd694cca4137dd441f.jpg",
-                caption="**`تم تشغيل سورس دراكو بنجاح لعرض الاوامر ارسل `.الاوامر**",
+                "https://telegra.ph/file/a50df372f0b5683adaeb1.jpg"
+                caption="تم تشغيل سورس دراكو بنجاح لعرض الاوامر ارسل `الاوامر`",
                 buttons=[(Button.url("كروب المساعدة", "https://t.me/DragoSupport"),)],
             )
     except Exception as e:
@@ -235,7 +235,7 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error("هنالك خطا ما للتعرف على فار كروب الحفظ\n" + str(e))
     else:
-        descript = "⪼ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا  𓆰."
+        descript = "‹ هذه هي مجموعه الحفظ الخاصه بك لا تحذفها ابدا ›"
         photobt = await sbb_b.upload_file(file="razan/pic/IMG_٢٠٢٣٠٣٣٠_١٤١٠٥٦.jpg")
         _, groupid = await create_supergroup(
             "كروب بوت دراكو", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
@@ -260,8 +260,8 @@ async def verifyLoggerGroup():
         except Exception as e:
             LOGS.error("حدث خطأ اثناء التعرف على كروب التخزين\n" + str(e))
     else:
-        descript = "❃ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص"
-        photobt = await sbb_b.upload_file(file="razan/pic/IMG_٢٠٢٣٠٣٣٠_١٤١٠٥٦.jpg")
+        descript = "‹ لا تحذف او تغادر المجموعه وظيفتها حفظ رسائل التي تأتي على الخاص ›"
+        photobt = await sbb_b.upload_file(file="razan/pic/IMG_٢٠٢٣٠٣٣٠_١٤١٠٥٦.jpg)
         _, groupid = await create_supergroup(
             "مجموعة التخزين", sbb_b, Config.TG_BOT_USERNAME, descript, photobt
         )
