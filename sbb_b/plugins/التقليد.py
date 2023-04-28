@@ -16,8 +16,8 @@ from . import get_user_from_event
 @sbb_b.ar_cmd(pattern="تقليد$")
 async def echo(event):
     if event.reply_to_msg_id is None:
-        return await edit_or_reply(event, "⌔∮ يرجى الرد على الشخص الذي تريد ازعاجه ،")
-    sbb_bevent = await edit_or_reply(event, "⌔∮ يتم تفعيل هذا الامر انتظر قليلا ،")
+        return await edit_or_reply(event, "‹ يرجى الرد على الشخص الذي تريد ازعاجه ›")
+    sbb_bevent = await edit_or_reply(event, "‹ يتم تفعيل هذا الامر انتظر قليلا ›")
     user, rank = await get_user_from_event(event, sbb_bevent, nogroup=True)
     if not user:
         return
@@ -33,22 +33,22 @@ async def echo(event):
     user_name = user.first_name
     user_username = user.username
     if is_echo(chat_id, user_id):
-        return await edit_or_reply(event, "⌔∮ تم تفعيل وضع الازعاج على الشخص بنجاح ✓")
+        return await edit_or_reply(event, "‹ تم تفعيل وضع الازعاج على الشخص بنجاح ›")
     try:
         addecho(chat_id, user_id, chat_name, user_name, user_username, chat_type)
     except Exception as e:
-        await edit_delete(sbb_bevent, f"⌔∮ خطأ\n`{str(e)}`")
+        await edit_delete(sbb_bevent, f"⎙ خطأ\n`{str(e)}`")
     else:
         await edit_or_reply(
             sbb_bevent,
-            "**⌔∮ تم تفعيل امر التقليد على هذا الشخص\nسيتم تقليد جميع رسائله هنا**",
+            "**‹ تم تفعيل امر التقليد على هذا الشخص\nسيتم تقليد جميع رسائله هنا ›**",
         )
 
 
 @sbb_b.ar_cmd(pattern="الغاء تقليد$")
 async def echo(event):
     if event.reply_to_msg_id is None:
-        return await edit_or_reply(event, "يجب عليك الرد على المستخدم لتقليد رسائله")
+        return await edit_or_reply(event, "‹ يجب عليك الرد على المستخدم لتقليد رسائله ›")
     reply_msg = await event.get_reply_message()
     user_id = reply_msg.sender_id
     chat_id = event.chat_id
@@ -58,9 +58,9 @@ async def echo(event):
         except Exception as e:
             await edit_delete(sbb_bevent, f"**خطأ:**\n`{e}`")
         else:
-            await edit_or_reply(event, "⌔∮ تم ايقاف التقليد لهذا المستخدم")
+            await edit_or_reply(event, "‹ تم ايقاف التقليد لهذا المستخدم ›")
     else:
-        await edit_or_reply(event, "⌔∮ لم يتم تفعيل التقليد على هذا المستخدم اصلا")
+        await edit_or_reply(event, "‹ لم يتم تفعيل التقليد على هذا المستخدم اصلا ›")
 
 
 @sbb_b.ar_cmd(pattern="حذف المقلدهم( للكل)?")
@@ -70,7 +70,7 @@ async def echo(event):
         lecho = get_all_echos()
         if len(lecho) == 0:
             return await edit_delete(
-                event, "⌔∮ لم يتم تفعيل التقليد حتى لمستخدم واحد اصلا."
+                event, "‹ لم يتم تفعيل التقليد حتى لمستخدم واحد اصلا ›"
             )
         try:
             remove_all_echos()
@@ -78,13 +78,14 @@ async def echo(event):
             await edit_delete(event, f"**خطأ:**\n`{str(e)}`", 10)
         else:
             await edit_or_reply(
-                event, "⌔∮ تم حذف تقليد جميع المستخدمين في جميع الدردشات."
+                event, "‹ تم حذف تقليد جميع المستخدمين في جميع الدردشات ›"
             )
     else:
         lecho = get_echos(event.chat_id)
         if len(lecho) == 0:
             return await edit_delete(
-                event, "⌔∮ لم يتم تفعيل التقليد حتى لمستخدم واحد اصلا."
+                event, "٠
+لم يتم تفعيل التقليد حتى لمستخدم واحد اصلا."
             )
         try:
             remove_echos(event.chat_id)
