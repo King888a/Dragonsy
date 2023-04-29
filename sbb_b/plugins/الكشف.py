@@ -54,7 +54,7 @@ async def fetch_info(replied_user, event):
     replied_user_profile_photos = await event.client(
         GetUserPhotosRequest(user_id=replied_user.id, offset=42, max_id=0, limit=80)
     )
-    replied_user_profile_photos_count = "⌔∮ هذا المستخدم لم يضع اي صورة"
+    replied_user_profile_photos_count = "› هذا المستخدم لم يضع اي صورة ‹"
     dc_id = "Can't get dc id"
     try:
         replied_user_profile_photos_count = replied_user_profile_photos.count
@@ -82,7 +82,7 @@ async def fetch_info(replied_user, event):
     )
     full_name = full_name or first_name
     username = "@{}".format(username) if username else ("⌔∮ هذا المستخدم ليس لديه معرف")
-    user_bio = "⌔∮ هذا المستخدم ليس لديه اي نبذة" if not user_bio else user_bio
+    user_bio = "› هذا المستخدم ليس لديه اي ننبذ ‹" if not user_bio else user_bio
     rozrtba = (
         ".「  مبرمج السورس  」."
         if user_id == 5298061670
@@ -95,14 +95,14 @@ async def fetch_info(replied_user, event):
         else rozrtba
     )    
     caption = " \n"
-    caption += f"╽<b>- الاسـم ⇜ </b> {full_name}\n"
-    caption += f"╽<b>- المـعـرف ⇜ </b> {username}\n"
-    caption += f"╽<b>- الايـدي  ⇜</b> <code>{user_id}</code>\n"
-    caption += f"╽<b>- الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
-    caption += f"╽<b>- عـدد الصـورة ⇜</b> {replied_user_profile_photos_count}\n"
-    caption += f"╽<b>- الرتبـة ⇜</b>{rozrtba}\n"
-    caption += f"╽<b>-️ الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n\n"
-    caption += f"╽<b>- رابط حسـابه ⇜</b> "
+    caption += f"<b>- الاسـم ⇜ </b> {full_name}\n"
+    caption += f"<b>- المـعـرف ⇜ </b> {username}\n"
+    caption += f"<b>- الايـدي  ⇜</b> <code>{user_id}</code>\n"
+    caption += f"<b>- الـمجموعات المشتـركة ⇜</b> {common_chat}\n"
+    caption += f"<b>- عـدد الصـورة ⇜</b> {replied_user_profile_photos_count}\n"
+    caption += f"<b>- الرتبـة ⇜</b>{rozrtba}\n"
+    caption += f"<b>-️ الـنبـذه ⇜</b> \n<code>{user_bio}</code>\n\n"
+    caption += f"<b>- رابط حسـابه ⇜</b> "
     caption += f'<a href="tg://user?id={user_id}">{first_name}</a>\n'
     return photo, caption
 
