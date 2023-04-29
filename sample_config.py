@@ -17,7 +17,7 @@ class Config(object):
     API_HASH = os.environ.get("API_HASH") or None
     # داتا بيس تلقائي من هيروكو او استخدم elepthntsql
     DB_URI = os.environ.get("DATABASE_URL", None)
-    # كود تيرمكس باستخدام امر python3 stringsetup.py او من موقع https://replit.com/@JMTHONAR/stringsession
+    # كود تيرمكس باستخدام امر python3 stringsetup.py
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     # معرف و توكن بوتك
     TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN") or os.environ.get(
@@ -72,7 +72,7 @@ class Config(object):
     TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "jmthon")
     # هنا خلفيه مال تلجراف او بعض الاوامر
     THUMB_IMAGE = os.environ.get(
-        "THUMB_IMAGE", "https://graph.org/file/524d0431f17854870e678.jpg"
+        "THUMB_IMAGE", "https://telegra.ph/file/a50df372f0b5683adaeb1.jpg"
     )
     # هنا اسم الملف الي ما تريده يتثبت عندك
     NO_LOAD = list(os.environ.get("NO_LOAD", "").split())
