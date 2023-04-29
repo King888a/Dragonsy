@@ -1,7 +1,7 @@
 {
   "name": "سورس دراكو - DRAGO USERBOT",
   "description": "اللهم صلي وسلم وبارك على سيدنا محمد",
-  "logo": "https://telegra.ph/file/6b2ec54f813ec78f3c6d8.jpg",
+  "logo": "https://telegra.ph/file/a50df372f0b5683adaeb1.jpg",
   "keywords": [
     "plugin",
     "modular",
@@ -12,45 +12,45 @@
   "success_url": "#TODO",
   "env": {
     "ALIVE_NAME": {
-      "description": "هنا ضع اسم التلجرام الخاص بك",
+      "description": "‹ هنا ضع اسم التلجرام الخاص بك ›",
       "value": ""
     },
     "APP_ID": {
-      "description": "هنا ضع الاب ايدي الخاص بك يتكون من 8 ارقام", 
+      "description": "‹ هنا ضع الاب ايدي الخاص بك يتكون من 8 ارقام ›", 
       "value": ""
     },
-    "API_HASH": {
-      "description": "هنا ضع الايبي هاش الخاص بك",
+    "API_HASH": {منه
+      "description": "‹ هنا ضع الايبي هاش الخاص بك ›",
       "value": ""
     },
     "ENV": {
-      "description": "لا تغير هذه القيمه",
+      "description": "‹ لا تغير هذه القيمه ›",
       "value": "ANYTHING"
     },
     "COMMAND_HAND_LER": {
-      "description": "لا تغير هذه القيمه",
+      "description": "‹ لا تغير هذه القيمه ›",
       "value": "."
     },
     "STRING_SESSION": {
-      "description": "هنا ضع كود سيشن تيليثون او بايروجرام كود تيرمكس الخاص بك",
+      "description": "‹ هنا ضع كود سيشن تيليثون او بايروجرام كود تيرمكس الخاص بك ›",
       "value": ""
     },
     "TG_BOT_TOKEN": {
-      "description": "هنا ضع توكن بوتك الذي صنعته",
+      "description": "‹ هنا ضع توكن بوتك الذي صنعته ›",
       "value": ""
     },
     "HEROKU_API_KEY": {
-      "description": "هنا ضع الايبي كي الخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account",
+      "description": "‹ هنا ضع الايبي كي الخاص بحساب هيروكو من هذا الرابط https://dashboard.heroku.com/account ›",
       "value": "",
       "required": false
     },
     "HEROKU_APP_NAME": {
-      "description": "اسم التطبيق",
+      "description": "‹ اسم التطبيق ›",
       "value": "",
       "required": false
     },
     "TZ": {
-      "description": "المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك يجب ان يكون اول حرف كبير",
+      "description": "‹ المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك يجب ان يكون اول حرف كبير ›",
       "value": "Asia/Baghdad",
       "required": false
     }
