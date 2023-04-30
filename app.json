@@ -51,7 +51,7 @@
     },
     "TZ": {
       "description": "‹ المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك يجب ان يكون اول حرف كبير ›",
-      "value": "Asia/Baghdad",
+      "value": "Asia/Damascus",
       "required": false
     }
   },
