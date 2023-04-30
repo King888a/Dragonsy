@@ -45,7 +45,7 @@ async def _(event):
             except Exception as e:
                 return await edit_delete(event, f"`{e}`", 5)
 
-    await edit_or_reply(event, f"**{to_add_users} تم اضافته بنجاح ✓**")
+    await edit_or_reply(event, f"**{to_add_users} ‹ تم اضافته بنجاح ›**")
 
 
 @sbb_b.ar_cmd(pattern="ضيف ([\s\S]*)", groups_only=True)
@@ -56,20 +56,20 @@ async def get_users(event):
     sbb_b = await edit_or_reply(event, f"**جارِ اضأفه الاعضاء من  ** {legen_}")
     if sbb_b_chat in restricted:
         return await sbb_b.edit(
-            event, "**- لا يمكنك اخذ الاعضاء من مجموعه السورس العب بعيد ابني  :)**"
+            event, "**- لا يمكنك اخذ الاعضاء من مجموعه السورس   :)**"
         )
     sender = await event.get_sender()
     me = await event.client.get_me()
     if not sender.id == me.id:
-        await sbb_b.edit("**▾∮ تتم العملية انتظر قليلا ...**")
+        await sbb_b.edit("**‹ تتم العملية انتظر ققليل ›**")
     else:
-        await sbb_b.edit("**▾∮ تتم العملية انتظر قليلا ...**")
+        await sbb_b.edit("**‹ تتم العملية انتظر قليلا ›**")
     if event.is_private:
-        return await sbb_b.edit("- لا يمكنك اضافه الاعضاء هنا")
+        return await sbb_b.edit("‹ لا يمكنك اضافه الاعضاء هنا ›")
     s = 0
     f = 0
     error = "None"
-    await sbb_b.edit("**▾∮ حالة الأضافة:**\n\n**▾∮ تتم جمع معلومات المستخدمين 🔄 ...⏣**")
+    await sbb_b.edit("**▾∮ حالة الأضافة:**\n\n**‹ تتم جمع معلومات المستخدمين ›**")
     async for user in event.client.iter_participants(event.pattern_match.group(1)):
         try:
             if error.startswith("Too"):
@@ -81,12 +81,12 @@ async def get_users(event):
             await sbb_b(InviteToChannelRequest(channel=event.chat_id, users=lol))
             s = s + 1
             await sbb_b.edit(
-                f"**▾∮تتم الأضافة **\n\n• اضيف `{s}` \n•  خطأ بأضافة `{f}` \n\n**× اخر خطأ:** `{error}`"
+                f"**‹ تتم الأضافة **\n\n• اضيف `{s}` \n•  خطأ بأضافة `{f}` \n\n**× اخر خطأ:** `{error}`"
             )
             await asyncio.sleep(60)
         except Exception as e:
             error = str(e)
             f = f + 1
     return await sbb_b.edit(
-        f"**▾∮اڪتملت الأضافة ✅** \n\n• تم بنجاح اضافة `{s}` \n• خطأ بأضافة `{f}`"
+        f"**‹ اڪتملت الأضافة** \n\n تم بنجاح اضافة › `{s}` \n• خطأ بأضافة `{f}`"
     )
